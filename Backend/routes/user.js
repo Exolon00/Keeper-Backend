@@ -4,7 +4,8 @@ const { suserMiddleware } = require("../middleware/user");
 const { userMiddleware } = require("../middleware/user");
 const jwt = require('jsonwebtoken');
 const { User, Note } = require("../db");
-const jwtPassword = 'Exolon13';
+require('dotenv').config();
+const jwtPassword = process.env.JWT_SECRET;
 const { zodUserSchema } = require('../types')
 
 // User Routes

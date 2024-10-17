@@ -1,6 +1,7 @@
 const { User } = require("../db");
 const jwt = require('jsonwebtoken');
-const jwtPassword = 'Exolon13';
+require('dotenv').config();
+const jwtPassword = process.env.JWT_SECRET;
 
 
 

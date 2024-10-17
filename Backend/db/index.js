@@ -1,7 +1,8 @@
 const mongoose = require('mongoose');
+require('dotenv').config();
+const DB_URL= process.env.DB_URL
 
-
-mongoose.connect('mongodb+srv://exolon00:4GmSyrs6noECkOqM@cluster0.ykamnkv.mongodb.net/Notes_app');
+mongoose.connect(DB_URL);
 
 
 const UserSchema = new mongoose.Schema({
