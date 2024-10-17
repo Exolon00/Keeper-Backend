@@ -11,7 +11,7 @@ const { zodUserSchema } = require('../types')
 // User Routes
 router.post('/signup', (req, res) => {
     //  user signup 
-    const parsedUser = zodUserSchema.safeParse(req.body)
+    const parsedUser =  zodUserSchema.safeParse(req.body)
     
     
     if (!parsedUser.success) {
